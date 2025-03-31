@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ai-practical-task-1"
+version = "0.1.0"
+description = ""
+authors = ["pk.developing@gmail.com"]
+readme = "README.md"
+packages = [
+    { include = "bfs_dfs_algorithms", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "<=3.13,>=3.12"
+networkx = "^3.4.2"
+matplotlib = "^3.10.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

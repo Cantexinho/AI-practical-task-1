@@ -1,8 +1,8 @@
-from graph_operations import GraphOperations
+from bfs_dfs_algorithms.operations.graph import GraphOperations
 import timeit
 
 
-def bfs(graph_name: str) -> None:
+def process_bfs(graph_name: str) -> None:
     operations = GraphOperations()
 
     graph = operations.load_graph(f"graphs/{graph_name}")
@@ -14,7 +14,7 @@ def bfs(graph_name: str) -> None:
     operations.visualize(graph)
 
 
-def dfs(graph_name: str) -> None:
+def process_dfs(graph_name: str) -> None:
     operations = GraphOperations()
 
     graph = operations.load_graph(f"graphs/{graph_name}")
@@ -26,13 +26,17 @@ def dfs(graph_name: str) -> None:
     operations.visualize(graph)
 
 
-if __name__ == "__main__":
+def main():
     algorythm = input("Enter what algorythm you want to use (bfs/dfs): ")
     graph = input("Enter graph name from graphs folder: ")
     if algorythm == "bfs":
-        bfs(graph)
+        process_bfs(graph)
     if algorythm == "dfs":
-        dfs(graph)
+        process_dfs(graph)
+
+
+if __name__ == "__main__":
+    main()
 
 
 # graph = operations.create_undirected_graph(20, 12)
