@@ -1,1 +1,5 @@
-https://vma2023.viko.lt/mod/assign/view.php?id=100296
+How to run it?
+
+- Install `poetry` in your local machine.
+- Run `poetry install` in project level.
+- Run `poetry run train_and_test` in project level.

@@ -5,7 +5,7 @@ import timeit
 def process_bfs(graph_name: str) -> None:
     operations = GraphOperations()
 
-    graph = operations.load_graph(f"graphs/{graph_name}")
+    graph = operations.load_graph(f"src/bfs_dfs_algorithms/graphs/{graph_name}")
     report = operations.bfs(graph, 0)
     report["operation_time"] = timeit.timeit(lambda: operations.bfs(graph, 0), number=1)
 
@@ -17,7 +17,7 @@ def process_bfs(graph_name: str) -> None:
 def process_dfs(graph_name: str) -> None:
     operations = GraphOperations()
 
-    graph = operations.load_graph(f"graphs/{graph_name}")
+    graph = operations.load_graph(f"src/bfs_dfs_algorithms/graphs/{graph_name}")
     report = operations.dfs(graph, 0)
     report["operation_time"] = timeit.timeit(lambda: operations.dfs(graph, 0), number=1)
 

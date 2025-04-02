@@ -1,18 +1,21 @@
-[tool.poetry]
-name = "ai-practical-task-1"
+[project]
+name = "bfs_dfs_algorithms"
 version = "0.1.0"
 description = ""
-authors = ["pk.developing@gmail.com"]
-readme = "README.md"
-packages = [
-    { include = "bfs_dfs_algorithms", from = "src" },
+authors = [
+    {name = "Cantexinho",email = "pk.developing@gmail.com"}
 ]
+readme = "README.md"
+requires-python = ">=3.13"
 
-[tool.poetry.dependencies]
-python = "<=3.13,>=3.12"
-networkx = "^3.4.2"
-matplotlib = "^3.10.1"
+dependencies = [
+    "networkx<=3.4.2",
+    "matplotlib<=3.10.1",
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+bfs_dfs_algorithm = "bfs_dfs_algorithms.__main__:main"
